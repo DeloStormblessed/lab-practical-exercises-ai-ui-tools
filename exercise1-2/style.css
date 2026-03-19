@@ -1,0 +1,227 @@
+/* Minimal base reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #f8f8f8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navbar */
+.nav-bar {
+  position: relative;
+  background: #a00202;
+  color: #f8f8f8;
+  padding: 0.75rem 1rem;
+  opacity: 0.9;
+  border-bottom: 3px solid #e7eb08;
+}
+
+.bandas-beca {
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+  border-top: 2.5px solid #a00202;
+  height: 2.5px;
+  background-color: #e7eb08;
+  border-bottom: 2.5px solid #a00202;
+  opacity: 0.9;
+}
+
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.nav-bar a {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin: 0 40px;
+}
+
+/* Hero */
+#hero {
+  position: relative;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://jardinessinfronteras.com/wp-content/uploads/2016/11/chumbera-opuntia-littoralis.jpg?w=816")
+      center/cover no-repeat;
+  color: #fff;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #f8f8f8);
+  pointer-events: none;
+}
+
+#hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+#hero p {
+  max-width: 44rem;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Section spacing */
+section {
+  margin: 0rem 3rem;
+  padding: 1rem 1rem;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.container-elements h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  text-align: center;
+}
+section p {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.container > div {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+#servicios .container > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+#servicios .container h2 {
+  margin-top: 0;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+#contacto .contact-info {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#contacto .contact-info .phone,
+#contacto .contact-info .email {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #0b3d91;
+}
+
+#contacto .social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#contacto .social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+#contacto .social-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Footer-ish sections */
+#unete,
+#contacto {
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#unete div {
+  display: flex;
+  justify-content: center;
+}
+#unete h2,
+#contacto h2 {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
